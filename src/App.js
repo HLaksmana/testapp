@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {FilterTable} from './components/FilterTable'
+import Dropdown from './components/Dropdown'
+import Dropdowns from './components/DropdownTemplate'
+
+const items = [
+  {
+    id:1,
+    value: 'Blue',
+  },
+  {
+    id:2,
+    value: 'Green',
+  },
+  {
+    id:3,
+    value: 'Red',
+  },
+  {
+    id:4,
+    value: 'Purple',
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dropdown title = 'select item' items = {items}/>
+      <Dropdowns/>
+
     </div>
   );
 }
